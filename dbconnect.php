@@ -16,6 +16,8 @@
 	$tvproblem = $_POST['problem'];
 	$clientAddress = $_POST['address'];
 	$clientNumber = $_POST['phno'];
+    $email = $_POST['email']
+    $name = $_POST['name']
 
 	
     $query = "INSERT INTO `tvservice` (`tvname`, `tvproblem`, `clientaddress`, `contact`) VALUES ('$tvName','$tvproblem','$clientAddress','$clientNumber')";

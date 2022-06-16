@@ -26,6 +26,15 @@
     <h1 class="main-heading">Navin Television Service</h1>
 
     <form action="dbconnect.php" method="POST">
+        <label for="name">Enter your name &ensp;&ensp;&emsp;&emsp;:&emsp;</label>
+        <input type="text" name="name" id="name" placeholder="Enter your name..">
+        <br>
+        <br>
+        <label for="email">Enter your email &ensp;&ensp;&emsp;&emsp;:&emsp; </label>
+        <input type="email" name="email" id="email" placeholder="example@mail.com">
+        <p class="optional">(optional)</p>
+        <br>
+        <br>
         <label for="browser">Select your TV &ensp;&ensp;&emsp;&emsp;&ensp;&nbsp;:&emsp; </label>
         <input list="tvs" name="tv" id="tv" placeholder="Search your tv brand">
         <datalist id="tvs">
