@@ -1,0 +1,130 @@
+Name 
+Product nti tv or lappy or phone 
+Problem 
+Adress 
+Contact
+
+
+<?php
+
+    $server = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "services";
+
+    // Database connection
+    $connection = mysqli_connect($server, $username, $password,$dbname);
+
+    if (!$connection) {
+        die("Connect to the database is not established" . mysqli_connect_error());
+    }
+
+	$tvName = $_POST['tv'];
+	$tvproblem = $_POST['problem'];
+	$clientAddress = $_POST['address'];
+	$clientNumber = $_POST['phno'];
+
+	
+    $query = "INSERT INTO `tvservice` (`tvname`, `tvproblem`, `clientaddress`, `contact`) VALUES ('$tvName','$tvproblem','$clientAddress','$clientNumber')";
+
+    $result = mysqli_query($connection, $sql) or die("Error " . mysqli_error($connection));
+
+    mysqli_close($connection);
+
+
+
+
+
+
+    // if($connection->query($query)==true){
+    //     echo "Good God your services is registerd and our worker will call you soon...";
+    // }
+    // else{
+    //     echo "<p>here there encounterd an Error : $query <br> $connection->error</p>";
+    // }
+
+    //method for options
+    // $query2 = "SELECT company_name from tvnames ORDER BY company_name;";
+
+    // $result2 = mysqli_query($connection, $query2);
+
+    // $options = "";
+
+    // while($row2 = mysqli_fetch_array($result2))
+    // {
+    //     $options = $options."<option value='$row2['company_name']'><br>";
+    // }
+
+    // $connection->close();
+
+
+?>
+
+<!-- <html>
+    <body>
+        <h1>Your service is succesfully booked</h1>
+    </body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Navin Services</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="images/main-logo-ne.jpg" alt="main-logo">
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#">TV</a></li>
+                <li><a href="#">Laptop</a></li>
+                <li><a href="#">Mobile</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <h1 class="main-heading">Navin Television Service</h1>
+
+    <form action="dbconnect.php" method="POST">
+        
+        <br>
+        <br>
+        <label for="problem">Describe your problem : &emsp;</label>
+        <textarea name="problem" id="problem" rows="3" cols="25" placeholder="Describe your issue.."></textarea>
+        <br>
+        <br>
+        <label for="problem">Enter your Address&emsp;&emsp;:&emsp; </label>
+        <textarea name="address" id="address" rows="3" cols="25" placeholder="Enter your address"></textarea>
+        <br>
+        <br>
+        <label for="contact">Contact &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;: &emsp;</label>
+        <input type="number" name="phno" id="phno" placeholder="Enter your phone number">
+        <br>
+        <br>
+        <input type="submit" value="Book Service" class="btn">
+
+        <label for="browser">Select your TV &ensp;&ensp;&emsp;&emsp;&ensp;&nbsp;:&emsp; </label>
+        <input list="tvs" name="tv" id="tv" placeholder="Search your tv brand">
+        <datalist id="tvs">
+            <?php
+                include 'dbconnect.php';
+               
+                while($row = mysqli_fetch_array($result)) { ?>
+                <option value="<?php echo $row['country_name']; ?>"><?php echo $row['country_name']; ?></option>
+                <?php } ?>                
+        </datalist>
+    </form>
+
+</body>
+
+</html>

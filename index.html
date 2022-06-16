@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Navin Services</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="images/main-logo-ne.jpg" alt="main-logo">
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#">TV</a></li>
+                <li><a href="#">Laptop</a></li>
+                <li><a href="#">Mobile</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <h1 class="main-heading">Navin Television Service</h1>
+
+    <form action="dbconnect.php" method="POST">
+        <label for="browser">Select your TV &ensp;&ensp;&emsp;&emsp;&ensp;&nbsp;:&emsp; </label>
+        <input list="tvs" name="tv" id="tv" placeholder="Search your tv brand">
+        <datalist id="tvs">
+            <option value="Samsung">
+            <option value="Mi">
+            <option value="Sony">
+            <option value="VU">
+            <option value="LG">
+            <option value="Oscar">
+            <option value="China TV">
+            <option value="videocon">
+            <option value="Panasonic">
+        </datalist>
+        <br>
+        <br>
+        <label for="problem">Describe your problem : &emsp;</label>
+        <textarea name="problem" id="problem" rows="3" cols="25" placeholder="Describe your issue.."></textarea>
+        <br>
+        <br>
+        <label for="problem">Enter your Address&emsp;&emsp;:&emsp; </label>
+        <textarea name="address" id="address" rows="3" cols="25" placeholder="Enter your address"></textarea>
+        <br>
+        <br>
+        <label for="contact">Contact &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;: &emsp;</label>
+        <input type="number" name="phno" id="phno" placeholder="Enter your phone number">
+        <br>
+        <br>
+        <input type="submit" value="Book Service" class="btn">
+    </form>
+
+</body>
+
+</html>
