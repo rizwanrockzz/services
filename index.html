@@ -23,11 +23,11 @@
         </div>
     </nav>
 
-    <h1 class="main-heading">Navin Television Service</h1>
+    <h1 class="main-heading">Television Service</h1>
 
     <form action="dbconnect.php" method="POST">
         <label for="name">Enter your name &ensp;&ensp;&emsp;&emsp;:&emsp;</label>
-        <input type="text" name="name" id="name" placeholder="Enter your name..">
+        <input type="text" name="name" id="name" placeholder="Enter your name.." required>
         <br>
         <br>
         <label for="email">Enter your email &ensp;&ensp;&emsp;&emsp;:&emsp; </label>
@@ -36,7 +36,7 @@
         <br>
         <br>
         <label for="browser">Select your TV &ensp;&ensp;&emsp;&emsp;&ensp;&nbsp;:&emsp; </label>
-        <input list="tvs" name="tv" id="tv" placeholder="Search your tv brand">
+        <input list="tvs" name="tv" id="tv" placeholder="Search your tv brand" required>
         <datalist id="tvs">
             <option value="Samsung">
             <option value="Mi">
@@ -51,15 +51,15 @@
         <br>
         <br>
         <label for="problem">Describe your problem : &emsp;</label>
-        <textarea name="problem" id="problem" rows="3" cols="25" placeholder="Describe your issue.."></textarea>
+        <textarea name="problem" id="problem" rows="3" cols="25" placeholder="Describe your issue.." required></textarea>
         <br>
         <br>
         <label for="problem">Enter your Address&emsp;&emsp;:&emsp; </label>
-        <textarea name="address" id="address" rows="3" cols="25" placeholder="Enter your address"></textarea>
+        <textarea name="address" id="address" rows="3" cols="25" placeholder="Enter your address" required></textarea>
         <br>
         <br>
         <label for="contact">Contact &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;: &emsp;</label>
-        <input type="number" name="phno" id="phno" placeholder="Enter your phone number">
+        <input type="number" name="phno" id="phno" placeholder="Enter your phone number" required>
         <br>
         <br>
         <input type="submit" value="Book Service" class="btn">

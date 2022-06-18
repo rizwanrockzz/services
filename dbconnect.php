@@ -16,11 +16,11 @@
 	$tvproblem = $_POST['problem'];
 	$clientAddress = $_POST['address'];
 	$clientNumber = $_POST['phno'];
-    $email = $_POST['email']
-    $name = $_POST['name']
+    $email = $_POST['email'];
+    $name = $_POST['name'];
 
 	
-    $query = "INSERT INTO `tvservice` (`tvname`, `tvproblem`, `clientaddress`, `contact`) VALUES ('$tvName','$tvproblem','$clientAddress','$clientNumber')";
+    $query = "INSERT INTO `tvservice` (`customer_name`, `email`, `id`, `tvname`, `tvproblem`, `clientaddress`, `contact`) VALUES ('$name','$email', NULL, '$tvName','$tvproblem','$clientAddress','$clientNumber')";
 
 
     if($connection->query($query)==true){
@@ -36,6 +36,16 @@
 ?>
 
 <html>
+    <head>
+        <style>
+            h1{
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                height:80vh;
+            }
+        </style>
+    </head>
     <body>
         <h1>Your service is succesfully booked</h1>
     </body>
