@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/fa9530214e.js" crossorigin="anonymous"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
@@ -13,7 +14,7 @@
 </head>
 
 <body>
-    <nav>
+    <nav class="bigscreen-nav">
         <div class="logo">
             <img src="images/main-logo.png" alt="main-logo">
         </div>
@@ -25,6 +26,24 @@
             </ul>
         </div>
     </nav>
+
+    <nav class="smallscreen-nav">
+        <div class="logo">
+            <img src="images/main-logo.png" alt="main-logo">
+        </div>
+        <div class="nav-links" onclick="allowNav()">
+            <i class="icon fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+    <div class="mobile-nav-list animate__animated animate__fadeInLeft">
+        <ul class="mobile-nav">
+            <li><a href="index.html">TV</a></li>
+            <li><a href="mobiles.html">Mobile</a></li>
+            <li><a href="laptops.html">Laptop</a></li>
+        </ul>
+    </div>
+
 
     <div class="main-hero">
         <img class="small-tv" src="images/tvsmall.png" alt="smalltv">
@@ -75,14 +94,13 @@
         </form>
         <div class="img-section">
             <img src="images/tv1.png" alt="tv-1">
-            <!-- <img src="images/tv2.jpg" alt="tv-2"> -->
             <img src="images/tv6.jpg" alt="tv-3">
-            <!-- <img src="images/tv4.png" alt="tv-4"> -->
         </div>
     </div>
     <footer>
         <p>&copy; navinelectronics.com</p>
     </footer>
 </body>
+<script src="app.js"></script>
 
 </html>

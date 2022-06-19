@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
 
 * {
   margin: 0;
@@ -11,7 +12,57 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-nav {
+/* Navbar */
+
+.smallscreen-nav {
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  color: white;
+  background: #8a2387;
+  background: -webkit-linear-gradient(to right, #f27121, #e94057, #8a2387);
+  background: linear-gradient(to right, #f27121, #e94057, #8a2387);
+}
+
+.smallscreen-nav img {
+  width: 70px !important;
+  margin-bottom: 0 !important;
+  width: 100px;
+}
+
+.mobile-nav-list {
+  display: none;
+  width: 100%;
+  background: black;
+  color: white;
+}
+
+.mobile-nav-list ul {
+  list-style: none;
+}
+
+.mobile-nav-list ul li {
+  text-align: center;
+  padding: 20px;
+  border-bottom: white 1px solid;
+}
+
+.mobile-nav-list ul li a {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.mobile-nav-allow {
+  display: block !important;
+}
+
+i {
+  font-size: 20px;
+}
+
+.bigscreen-nav {
   display: flex;
   /* justify-content: space-around; */
   padding: 3rem;
@@ -23,6 +74,9 @@ nav {
   flex-direction: column;
   top: 0;
   left: 0;
+}
+
+nav {
   color: white;
   background: #8a2387;
   background: -webkit-linear-gradient(to bottom, #f27121, #e94057, #8a2387);
@@ -52,7 +106,7 @@ nav .nav-links ul li {
   margin: 15px;
 }
 
-.main-hero{
+.main-hero {
   margin: 20px auto 10px auto;
   display: flex;
   justify-content: center;
@@ -69,7 +123,7 @@ nav .nav-links ul li {
   font-size: 2.3rem;
 }
 
-.grid-section{
+.grid-section {
   margin-left: 120px;
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -77,19 +131,19 @@ nav .nav-links ul li {
   align-items: center;
 }
 
-.img-section{
+.img-section {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.img-section img{
+.img-section img {
   width: 370px;
   border-radius: 10px;
 }
 
-.small-tv{
+.small-tv {
   width: 65px;
 }
 
@@ -156,9 +210,42 @@ textarea {
   color: white;
 }
 
-footer p{
+footer p {
   text-align: center;
   margin: 40px;
 }
 
+@media only screen and (max-width: 600px) {
+  .grid-section {
+    margin-left: 0;
+    grid-template-columns: 1fr;
+  }
 
+  form {
+    width: 330px;
+  }
+
+  .bigscreen-nav {
+    display: none;
+  }
+
+  nav .logo img {
+    margin-bottom: 0;
+  }
+
+  .smallscreen-nav {
+    display: flex;
+  }
+
+  .main-heading {
+    font-size: 1.5rem;
+  }
+
+  .small-tv {
+    width: 45px;
+  }
+
+  .small-phone {
+    width: 20px;
+  }
+}
