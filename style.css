@@ -26,7 +26,7 @@ body {
 }
 
 .smallscreen-nav img {
-  width: 70px !important;
+  width: 75px !important;
   margin-bottom: 0 !important;
   width: 100px;
 }
@@ -59,7 +59,7 @@ body {
 }
 
 i {
-  font-size: 20px;
+  font-size: 35px;
 }
 
 .bigscreen-nav {
@@ -151,7 +151,6 @@ form {
   background: #159957;
   background: -webkit-linear-gradient(to right, #155799, #159957);
   background: linear-gradient(to right, #155799, #159957);
-
   width: 550px;
   padding: 40px;
   margin: 30px auto;
@@ -193,10 +192,12 @@ textarea {
 }
 
 .btn {
-  background: yellow;
+  background: #f12711;
+  background: -webkit-linear-gradient(to right, #f5af19, #f12711);
+  background: linear-gradient(to right, #f5af19, #f12711);
   padding: 10px 15px;
-  color: black;
-  width: 120px;
+  color: white;
+  width: 140px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -235,6 +236,7 @@ footer p {
 
   .smallscreen-nav {
     display: flex;
+    justify-content: space-between;
   }
 
   .main-heading {
@@ -247,5 +249,33 @@ footer p {
 
   .small-phone {
     width: 20px;
+  }
+
+  form {
+    width: calc(100% - 30px);
+  }
+
+  label {
+    font-size: 18px;
+  }
+
+  form input {
+    width: 100%;
+    margin: 13px auto;
+    font-size: 18px;
+    height: 43px;
+  }
+
+  textarea {
+    width: 100%;
+    margin: 13px auto;
+  }
+
+  .img-section img {
+    width: calc(100% - 30px);
+  }
+
+  .btn{
+    width: 165px;
   }
 }
